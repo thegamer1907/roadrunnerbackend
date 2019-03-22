@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Amrita E-WALLET</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.min.css">
+    <script type="text/javascript" language="javascript" src="./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./javascripts/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/landing.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/uitil.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/form.css">
+    <script src="javascripts/landing.js"></script>
+    <script src="javascripts/registerfinanceadmin.js"></script>
+</head>
+
+<body>
+    <!-- ===================================================Navbar Begin=================================================================== -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="navbar-brand">
+                    <li> <a href="/"><img class="logo-navbar" src="assests/logo.png" width="100" height="30" class="d-inline-block align-top"
+                                align="left"></a>
+                    </li>
+                    <li><a style="font-size: 15.7px;">AMRITA E-WALLET</a></li>
+                </ul>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" id="nanc">
+                    <li><a href="/login" id="log" onmouseover="this.style.cursor='pointer';" style="font-size: 16px;">Login</a></li>
+                    <li><a href="/contact" style="font-size: 16px;">Contact</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- ===========================================================Navbar End================================================================ -->
+    <div class="bg-contact3">
+        <div class="container-contact3">
+            <div class="wrap-contact3">
+                <div class="contact3-form validate-form">
+                    <span class="contact3-form-title">
+                        Register Finance Admin
+                    </span>
+
+                    <div class="wrap-input3 validate-input select-hide" data-validate="Name is required">
+                        <input class="input3" type="text" name="Name" id="Name" placeholder="Name" required>
+                        <span class="focus-input3"></span>
+                    </div>
+
+                    <div class="wrap-input3 validate-input" data-validate="phonenumber is required">
+                        <input class="input3" type="number" name="phonenumber" id="phonenumber" placeholder="phone number"
+                            required autocomplete="false">
+                        <span class="focus-input3"></span>
+                    </div>
+
+                    <div class="wrap-input3 validate-input" data-validate="username is required">
+                        <input class="input3" type="email" name="username" id="username" placeholder="username"
+                            required autocomplete="false">
+                        <span class="focus-input3"></span>
+                    </div>
+
+                    <div class="wrap-input3 validate-input" data-validate="Password is required">
+                        <input class="input3" type="password" name="Password" id="Password" placeholder="Password"
+                            required autocomplete="false">
+                        <span class="focus-input3"></span>
+                    </div>
+
+
+                    <div class="container-contact3-form-btn">
+                        <button class="contact3-form-btn" onclick="registerfinanceadmin()" id="sub">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+
+</script>
+
+</html>

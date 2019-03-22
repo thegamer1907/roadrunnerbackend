@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>Amrita E-WALLET</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.min.css">
+    <script type="text/javascript" language="javascript" src="./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./javascripts/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./stylesheets/main.css">
+</head>
+
+<body>
+    <!-- ===================================================Navbar Begin=================================================================== -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="navbar-brand">
+                    <li> <a href="/"><img class="logo-navbar" src="assests/logo.png" width="100" height="30" class="d-inline-block align-top"
+                                align="left"></a>
+                    </li>
+                    <li><a style="font-size: 15.7px;">AMRITA E-WALLET</a></li>
+                </ul>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" id="nanc">
+                    <li><a href="/login" id="log" onmouseover="this.style.cursor='pointer';" style="font-size: 16px;">Login</a></li>
+                    <li><a href="/contact" style="font-size: 16px;">Contact</a></li>
+
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- ===========================================================Navbar End================================================================ -->
+    <div class="container pad-top">
+        <div class="row" style="color:aliceblue">
+            <div class="col-sm-7 brand-holder">
+                <h1>
+                    Amrita E-WALLET
+                </h1>
+
+                <div align="justify">&#x000A;Welcome to Amrita's very own E-Wallet !<br><br>With the constant agenda of
+                    getting Bigger and Better, this time we've brought another innovation as a leap to step up and go
+                    cashless! This Anokha, we are launching our latest initiative in support of Digital India- EWallet.
+                    Register at the e-wallet desks with your *ID CARDS* and recharge them like usual with any amount of
+                    your choice. They can be used at any of our food stalls, and can be recharged any number of times.
+                    At the end of Anokha, you are free to collect the balance amount in your e-wallet account from the
+                    desk!<strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row flex">
+
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card-action">
+                    <button onclick="location.href='/balance'" type="button" class="btn btn-success">Check Balance
+                        For an Existing Card</button>
+                </div>
+            </div>
+        </div>
+        <div class="row flex">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="card-action">
+                    <button onclick="location.href='/recharge'" type="button" class="btn btn-success">Recharge</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+</body>
+
+<script>
+    function set_all() {
+        $("#log").text('Logout');
+        $("#log").removeAttr("href");
+        $("#log").on('click', function () {
+            sessionStorage.removeItem("token");
+            location.reload();
+        });
+        $("#nanc").append(`<li><a href="/home" id="log" onmouseover="this.style.cursor='pointer';" style="font-size: 16px;">Dashboard</a></li>`)
+    }
+
+
+    if (sessionStorage.getItem("token") != null) {
+        set_all();
+    }
+
+</script>
+
+</html>

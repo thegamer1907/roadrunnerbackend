@@ -1,0 +1,234 @@
+<div class="container pad-top">
+        <div class="row flex">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="outlined-box">
+                <center>
+                    <span class="text-1"><p>Total cash in hand : </p></span>
+                    <span class="number-1"><a id="totalcash">Not available</a></span>
+                </center>
+                </div>
+        </div>
+        </div>
+    <div class="row flex">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div>
+                <span class="text-1">
+                    <h2 style="color:white">Operations on card</h2>
+                    <hr style="margin-top:0px">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex">
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Add Money</span>
+                    <p>This option enables you add money to an existing card</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/addmoney'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Register Card</span>
+                    <p>This option enables you register a new card</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/registercard'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Return Card</span>
+                    <p>This option enables you to collect card</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/return'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Take back Card</span>
+                    <p>This option enables you to collect damaged cards.Email verification is must for taking back card.</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/returndamaged'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Card Balance</span>
+                    <p>This option enables you to check card balance</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/balance'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">User And Vendor Balances</span>
+                    <p>Alerts the total amounts</p>
+                </div>
+                <div class="card-action">
+                    <button onclick=getsumcards() type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row flex">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div>
+                <span class="text-1">
+                    <h2 style="color:white">Operations on Vendor and Shop Items</h2>
+                    <hr style="margin-top:0px">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex">
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Vendor Total Sales</span>
+                    <p>This option enables you to see total sales of all vendors</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/vendorallsales'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div>
+                <span class="text-1">
+                    <h2 style="color:white">Operations on Admins</h2>
+                    <hr style="margin-top:0px">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row flex">
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Register Admin</span>
+                    <p>This option enables you to register a admin</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/registeradmin'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Collect Money</span>
+                    <p>This option enables you to collcet money from Admin</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/collect'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Issue Money</span>
+                    <p>This option enables you to issue money to Admin</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/issue'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Admin Details</span>
+                    <p>This option enables you to check all details of a admin.</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/admindetails'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row flex">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div>
+                <span class="text-1">
+                    <h2 style="color:white">Card Details</h2>
+                    <hr style="margin-top:0px">
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row flex">
+    
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Transactions of a card</span>
+                    <p>This option enables you to get Transactions of a card</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/transactionsofacard'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card new-color darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Reset Pin For User</span>
+                    <p>This option enables you to reset pin of user.</p>
+                </div>
+                <div class="card-action">
+                    <button onclick="location.href='/resetpin'" type="button" class="btn btn-success">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="/javascripts/sumcards.js"></script>
+
+<script src="/javascripts/sumadmin.js"></script>
+<script>
+    getsumadmin();
+</script>
+
+
+
