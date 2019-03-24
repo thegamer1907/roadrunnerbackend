@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-
+var singlemarathon = require('../singlemarathon/singlemarathon');
+var info = require('../info/info');
 var VerifyToken = require('./VerifyToken');
 
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -65,6 +66,10 @@ async function register(name, email, username, dob,password,phoneNumber,gender,p
 
     const A = await User.create([data]);
 
+    const B = await singlemarathon.create([{username}]);
+
+    const C = await info.create([{username}]);
+
     return {message : "Registered Successfully"};
 
 }
@@ -106,9 +111,10 @@ router.post('/resetpassword', VerifyToken, function (req, res) {
 });
 
 
-router.post('/login', bouncer.block ,function (req, res) {
+router.post('/login',function (req, res) {
 
-    User.findOne({ username: req.body.username }, async function (err, user) {
+    // console.log("here");
+    User.findOne({ username: req.body.username },{_id : 0}, async function (err, user) {
         if (err) return res.status(500).send({message : err.toString()});
         if (!user) return  res.status(400).send({ message: 'Invalid Credentials' });
 
@@ -121,8 +127,9 @@ router.post('/login', bouncer.block ,function (req, res) {
         var token = jwt.sign({ id: user._id, roles: roles, username: user.username }, config.secret, {
             expiresIn: 86400 // expires in 24 hours
         });
-        bouncer.reset(req);
-        res.status(200).send({ auth: true, token: token });
+
+        const A = await info.findOne({username : req.body.username});
+        res.status(200).send({ auth: true, token: token, user: user, score : A.points});
     });
 });
 
